@@ -1,0 +1,77 @@
+* {
+	background-color: rgba(0,0,0,0);
+	color: rgba(0,0,0,0);
+	text-color: rgba(210,210,210,1);
+	font: "JetBrainsMono NF Regular 12";
+	vertical-align: 0.5;
+}
+
+window {
+	location: north west;
+	y-offset:-27px;
+	width: 100%;
+	height: calc(100% + 27px);
+	children:[mainbox];
+}
+
+mainbox {
+	margin: 171px 500px 171px 500px;
+	padding: 6px;
+	border-radius: 22px;
+	orientation: vertical;
+	background-color: rgba(20,20,20,0.93);
+	children: [inputbar, listview];
+	spacing: 0;
+}
+
+inputbar {
+	spacing: 0;
+	orientation: horizontal;
+	children: [entry, num-filtered-rows];
+}
+
+entry {
+	spacing: 0;
+	padding: 5px 10px;
+	margin: 0 6px 0 0;
+	border-radius: 16px;
+	text-color: rgba(255,255,255,1);
+	background-color: rgba(210,210,210,0.27);
+}
+
+num-filtered-rows {
+	border-radius: 16px;
+	padding: 5px 10px;
+	text-color: rgba(255,255,255,1);
+	background-color: rgba(210,210,210,0.27);
+    expand:     false;
+}
+
+listview {
+	spacing: 0;
+}
+
+element {
+	spacing: 0;
+	margin : 6px 0 0 0;
+	orientation: horizontal;
+	children: [ element-icon, element-text ];
+}
+
+element-text selected , element-icon selected {
+	text-color: rgba(255,255,255,1);
+	background-color: rgba(210,210,210,0.27);
+}
+
+element-text {
+	border-radius: 16px;
+	padding: 5px 10px;
+}
+
+element-icon {
+	border-radius: 16px;
+	margin: 0 6px 0 0;
+	padding: 5px;
+	size: 1em;
+}
+

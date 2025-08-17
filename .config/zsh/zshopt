@@ -1,0 +1,18 @@
+#
+# Zsh setopts
+#
+
+# Common options
+setopt autocd 
+setopt correct 
+setopt nobeep 
+
+# History options
+setopt appendhistory 
+setopt histignorealldups 
+setopt inc_append_history
+
+# Auto-complete options
+setopt MENU_COMPLETE
+setopt AUTO_LIST
+setopt COMPLETE_IN_WORD

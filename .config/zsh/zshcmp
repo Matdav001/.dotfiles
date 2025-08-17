@@ -1,0 +1,29 @@
+# 
+# Zsh auto-complete options
+#
+
+# Defining completer
+zstyle ':completion:*' completer _complete _ignored _approximate
+
+# Common completion options 
+zstyle ':completion:*' menu select
+zstyle ':completion:*' complete-options true
+zstyle ':completion:*' insert-unambiguous false
+
+# Misc options
+zstyle ':completion:*' file-sort name
+zstyle ':completion:*' group-name ''
+zstyle ':completion:*' group-order original
+
+# Style options
+zstyle ':completion:*' format '%K{#323232} -- %d -- %f%k'
+zstyle ':completion:*' select-prompt '%K{#323232}%B || %p || %b%f%k'
+zstyle ':completion:*:default' list-prompt '%K{#323232} -- %M matches -- %k'
+zstyle ':completion:*:*:*:*:corrections' format '%K{#323232} -- %d %F{#D25050}(errors: %e)%f -- %k'
+zstyle ':completion:*:*:*:*:descriptions' format '%K{#323232} -- %D %d -- %k'
+zstyle ':completion:*:*:*:*:messages' format '%K{#323232} -- %d -- %k'
+zstyle ':completion:*:*:*:*:warnings' format '%K{#323232} -- no matches found -- %k'
+zstyle ':completion:*:*:*:*:default' list-colors ${(s.:.)LS_COLORS}
+
+# Source file
+zstyle :compinstall filename '$ZDOTDIR /.zshrc'

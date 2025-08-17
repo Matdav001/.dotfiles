@@ -1,0 +1,15 @@
+#
+# FEH Image viewer config
+#
+feh \
+--force-aliasing \
+--sort name \
+--version-sort \
+--image-bg #141414 \
+--scale-down \
+--auto-zoom \
+--no-menus \
+--on-last-slide hold \
+--draw-filename \
+--fontpath /home/mateus/.fonts/ \
+--font JetBrainsMonoNerdFont-Regular/10

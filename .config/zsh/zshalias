@@ -1,0 +1,2 @@
+alias ssh-work="ssh -i /home/mateus/repos/Keys/Oracle-Work/Private.key ubuntu@134.65.229.193"
+alias ssh-game="ssh -i /home/mateus/repos/Keys/Oracle-Games/Private.key ubuntu@164.152.198.72"

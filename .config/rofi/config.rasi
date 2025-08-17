@@ -1,0 +1,27 @@
+configuration {
+
+    // Timeout from user input.
+    timeout {
+        // The delay after inactivity to execute action.
+        delay: 0;
+        // The action to execute once the delay expires.
+        action: "kb-cancel";
+    }
+
+    // File browser mode.
+    filebrowser {
+        sorting-method:    "name";
+        directories-first: true;
+    }
+
+	drun-display-format: "{name}";
+
+	modes: [ drun ];	
+}
+
+* {
+	background-color: rgba(0,0,0,0);
+	color: rgba(0,0,0,0);
+	text-color: rgba(210,210,210,1);
+	border-color: rgba(210,210,210,1);
+}

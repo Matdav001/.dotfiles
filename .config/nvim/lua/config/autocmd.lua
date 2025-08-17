@@ -1,0 +1,7 @@
+--vim.api.nvim_create_autocmd("User", {
+--	once = true,
+--	pattern = "UIEnter",
+--	callback = function()
+--		vim.api.nvim_set_var("laststatus",0)
+--	end,
+--})
