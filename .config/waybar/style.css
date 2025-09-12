@@ -1,0 +1,74 @@
+* {
+	color: rgba(210,210,210,1);
+	background-color: transparent;
+	border-color: rgba(0,0,0,0);
+	border-radius: 0px;
+	font-size: 14px;
+	font-family: "JetBrainsMono Nerd Font Propo,JetBrainsMono NFP" ;
+	min-height: 25px;
+	margin: 0;
+	padding: 0;
+	box-shadow: none;
+	text-shadow: none;
+}
+
+tooltip * {
+	padding: 0 3px;
+	background: transparent;
+}
+
+tooltip.background {
+	border-radius: 15px;
+	background: rgba(20,20,20,0.93);
+}
+
+window#waybar {
+	background-color: rgba(20,20,20,0.8);
+}
+
+.modules-right, .modules-center, .modules-left {
+	margin: 0px;
+	padding: 0px;
+}
+
+#workspaces button {
+	border-radius: 15px;
+	padding: 0 5px;
+}
+
+button:hover {
+	border-radius: 15px; 
+	background: rgba(210,210,210,0.2);
+}
+
+#battery.good {
+	color: rgba(50,210,50,1);
+}
+
+#battery.warning {
+	color: rgba(210,210,50,1);
+}
+
+#network.disconnected, #battery.critical, #temperature.critical, #pulseaudio.muted {
+	color: rgba(210,50,50,1);
+}
+
+#pulseaudio.muted, #network, #disk, 
+#memory, #cpu, #temperature, #custom-power {
+	padding: 0px;
+	min-width: 27px;
+}
+
+#battery, #pulseaudio, #temperature.critical,
+#backlight, #window, #clock {
+	padding: 0 5px;
+	min-width: 0;
+}
+
+#battery:hover, #pulseaudio:hover, 
+#network:hover, #disk:hover, #memory:hover, #backlight:hover,
+#cpu:hover, #temperature:hover, #clock:hover, 
+#custom-power:hover {
+	background: rgba(210,210,210,0.2);
+	border-radius: 15px;
+}

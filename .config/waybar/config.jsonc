@@ -1,0 +1,164 @@
+{
+	"layer": "top", "position": "top",
+
+	"modules-left": ["disk", "memory", "cpu", "temperature", "hyprland/window"],
+
+	"modules-center": ["hyprland/workspaces"],
+
+	"modules-right": ["backlight", "pulseaudio", "network",  "battery", "clock", "custom/power"],
+
+	"reload_style_on_change":true,
+	
+	//
+	// Left modules
+	//
+	"disk": {
+		"format": "",
+		"path": "/",
+		"tooltip-format": 
+		" {specific_used:0.1f} / {specific_total:0.1f} GiB ({percentage_used}%)",
+		"unit": "GiB"
+	},
+
+	"memory": {
+		"format": "",
+		"tooltip-format": " {used:0.1f} / {total:0.1f} GiB ({percentage}%)\r󰍛 {swapUsed:0.1f} / {swapTotal:0.1f} GiB ({swapPercentage}%)"
+	},
+
+	"cpu": {
+		"format": "",
+	},
+
+	"temperature": {
+		"interval": 10,
+		"format": "",            
+		"format-critical": "<b> {temperatureC}°C</b>",
+		"critical-threshold": 55,
+		"tooltip-format": " {temperatureC}°C"
+	},
+
+	"hyprland/window": {
+		"format": "{class}",
+	},
+
+	//
+	// Center modules
+	//
+	"hyprland/workspaces": {
+		"format": "{icon}",
+		"format-icons": {
+			"1": "",
+			"2": "",
+			"3": "",
+			"4": "",
+			"5": "",
+			"6": "",
+			"7": "",
+			"8": "",
+			"9": "",
+			"10":"",
+			"active": "",
+			"default": "" 
+		},
+		"persistent-workspaces": {
+			"*": [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ]
+		},
+		"on-click": ""
+	},
+
+	// 
+	// Right modules
+	//
+	"backlight": {
+		"format": "{percent}% {icon}",
+		"format-icons": ["", "", "", "", "", "", "", "", ""],
+		"on-click": "brightnessctl set 70%",
+		"on-click-right":"brightnessctl set 5%",
+		"scroll-step": 1,
+		"smooth-scrolling-threshold": 1,
+		"on-scroll-up": "brightnessctl set 2%+",
+		"on-scroll-down": "brightnessctl set 2%-",
+		"tooltip-format": "{icon} {percent}%"
+	},
+
+	"pulseaudio": {
+		"format": "{volume}% {icon}",
+		"format-bluetooth":"{volume}% {icon}󰂰",
+		"format-muted": "",
+		"format-icons": {
+			"headphones": "",
+			"bluetooth": "󰥰",
+			"handsfree": "",
+			"headset": "󱡬",
+			"phone": "",
+			"portable": "",
+			"car": "",
+			"default": ["","",""]
+		},
+		"justify": "center",
+		"on-click": "amixer sset Master toggle",
+		"on-click-right": "pavucontrol",
+		"tooltip-format": "{icon} {volume}%"
+	},
+
+	"network": {
+		"format-wifi": "",
+		"format-ethernet":"󰈁",
+		"format-disconnected": "󱞐",
+		"format-disabled": "",
+		"tooltip-format": "{ipaddr}",
+		"tooltip-format-wifi": " {essid} ({signalStrength}%)",
+		"tooltip-format-ethernet": "󰈁 {ifname} | {ipaddr}",
+		"on-click": "iwgtk"
+	},
+
+	"battery": {
+		"states": {
+			"good": 90,
+			"warning": 30,
+			"critical": 20
+		},
+		"format": "{capacity}% {icon}",
+		"tooltip-format": "󰂎 {time}",
+		"format-charging": "{capacity}% 󰂄",
+		"tooltip-format-charging": "󰂄 {time}",
+		"format-full": "{capacity}% 󰁹",
+		"tooltip-format-full": "󰁹 Full",
+		"format-icons": [
+			"󰂎",
+			"󰁻",
+			"󰁽",
+			"󰁿",
+			"󰂁",
+			"󰁹"
+		],
+	},
+
+	"clock": {
+		"format": "{:L%I:%M}",
+		"format-alt": "{:%d/%m/%y}",
+		"tooltip-format": "<tt>{calendar}</tt>",
+		"calendar": {
+			"mode-mon-col": 3,
+
+			"format": {
+				"months":     "<span color='#78E1D2'><b>{}</b></span>",
+				"days":       "<span color='#D2D2D2'>{}</span>",
+				"weekdays":   "<span color='#D2D2D2'><b>{}</b></span>",
+				"today":      "<span color='#78E1D2'><u><b>{}</b></u></span>"
+			}
+		},
+		"actions": {
+			"on-click-middle": "shift_reset",
+			"on-click-right": "mode",
+			"on-scroll-up": "shift_up",
+			"on-scroll-down": "shift_down"
+		}
+	},
+
+	"custom/power": {
+		"format" : "<span font='14'>󰣇</span>",
+		"tooltip": false,
+		"on-click": "pkill Template || $HOME/Dotfiles/QtWidgets/Template/build/Template"
+	}
+}
