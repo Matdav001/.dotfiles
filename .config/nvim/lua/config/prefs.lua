@@ -19,3 +19,5 @@ vim.opt.incsearch = true
 vim.opt.wrap = false
 
 vim.opt.scrolloff = 0
+
+vim.opt.splitright = true

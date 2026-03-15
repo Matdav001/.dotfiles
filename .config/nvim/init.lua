@@ -11,3 +11,10 @@ require("config.lazy")
 
 -- Enable extras configs
 require("config")
+
+local installedPacks = require("mason-registry").get_installed_packages()
+local lspConfigNames = vim.iter(installedPacks):fold({}, function(acc, pack)
+	table.insert(acc, pack.spec.neovim and pack.spec.neovim.lspconfig)
+	return acc
+end)
+vim.lsp.enable(lspConfigNames)

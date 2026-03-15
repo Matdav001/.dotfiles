@@ -6,12 +6,6 @@
 
 vim.g.mapleader = " "
 
--- Function to set description for Keymaps
-
-local function opts(desc)
-	return {desc = "nvim-tree: " .. desc, noremap = true, silent = true, nowait = true}
-end
-
 -- Keymaps from NeoVim
 
 vim.keymap.set("n", "<leader>s", vim.cmd.so, { desc = "Pre Source File" })
@@ -26,16 +20,9 @@ vim.keymap.set("n", "<leader>fs", function() require('fzf-lua').grep() end, { de
 
 -- Keymaps from Nvim-tree
 
-vim.keymap.set("n", "<leader>t", function () require "nvim-tree.api".tree.open() end, { desc = "Pre Source File" })
-vim.keymap.set("n", "<leader>ct", function () require "nvim-tree.api".tree.close() end, { desc = "Pre Source File" })
-function NvimTreeKeys()
-	local treeApi = require("nvim-tree.api")
-
-	vim.keymap.set('n', '<leader><leader>', function ()
-		ChangeDir(0, vim.fn.expand("%:h"))
-		treeApi.tree.open({find_file = true})
-	end, opts('Change-Tree-Dir'))
-end
+vim.keymap.set("n", "<leader>t",function()
+	vim.cmd('Oil')
+end, { desc = "Pre Source File" })
 
 -- Keymaps from Better-Whitespace
 
