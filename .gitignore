@@ -2,3 +2,4 @@
 .config/zsh/.zcompdump
 .config/zsh/hist/.histfile
 .config/vifm/vifminfo.josn*
+./nvimlog
