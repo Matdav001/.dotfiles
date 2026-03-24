@@ -1,6 +1,8 @@
 /.config/zsh/plugins
+/scripts
 /.config/zsh/hist
 /.config/zsh/.zcompcache
 /.config/zsh/.zcompdump
 /.git
+/Pictures/Background/^(?!background$)
 /README.md

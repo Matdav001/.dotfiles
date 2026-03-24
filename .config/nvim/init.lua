@@ -6,6 +6,7 @@
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
+vim.cmd("colorscheme myNvim")
 -- Enable plugins managed by lazy
 require("config.lazy")
 
@@ -18,3 +19,7 @@ local lspConfigNames = vim.iter(installedPacks):fold({}, function(acc, pack)
 	return acc
 end)
 vim.lsp.enable(lspConfigNames)
+
+-- Enable spell
+vim.opt.spell = true
+vim.opt.spelllang = { 'en_us' }
