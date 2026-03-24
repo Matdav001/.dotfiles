@@ -7,6 +7,7 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
+export PATH="$PATH:/home/mateus/go/bin"
 # Source zsh setopts.
 export PATH="/home/mateus/.config/composer/vendor/bin:$PATH"
 [ -f "${ZDOTDIR}/zshopt" ] && source "${ZDOTDIR}/zshopt"
