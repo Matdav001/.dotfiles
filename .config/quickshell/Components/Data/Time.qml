@@ -1,20 +1,16 @@
-// Time.qml
 pragma Singleton
 
 import Quickshell
 import QtQuick
 
 Singleton {
-  id: root
-  // an expression can be broken across multiple lines using {}
-  readonly property string time: {
-    // The passed format string matches the default output of
-    // the `date` command.
-    Qt.formatDateTime(clock.date, "hh:mm")
-  }
+    id: root
+    // an expression can be broken across multiple lines using {}
+    readonly property string time: Qt.formatDateTime(clock.date, "hh:mm")
 
-  SystemClock {
-    id: clock
-	precision: SystemClock.Minutes
-  }
+    readonly property string timeVertical: time.replace(":", "\n")
+    SystemClock {
+        id: clock
+        precision: SystemClock.Minutes
+    }
 }
